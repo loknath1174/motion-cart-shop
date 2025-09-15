@@ -41,22 +41,19 @@ export const ProductListing = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Hero Section */}
+      {/* Page Header */}
       <motion.section
-        className="text-center py-16 mb-12"
+        className="text-center py-12 mb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-5xl font-bold text-gradient mb-6">
-          Premium Products, Delivered
+        <h1 className="text-4xl font-bold text-gradient mb-4">
+          Our Products
         </h1>
-        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Discover our curated collection of high-quality products with seamless shopping experience
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Browse our carefully curated collection of premium products
         </p>
-        <Button variant="hero" size="xl" className="animate-float">
-          Shop Now
-        </Button>
       </motion.section>
 
       {/* Filters and View Options */}

@@ -212,8 +212,24 @@
     @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
   }
 
+  .text-gradient-light {
+    @apply bg-gradient-to-r from-white via-white to-white/80 bg-clip-text text-transparent;
+  }
+
+  .bg-pattern {
+    background-image: radial-gradient(circle at 50% 50%, hsl(var(--primary) / 0.1) 0%, transparent 50%);
+  }
+
   .shadow-glow {
     box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-elegant {
+    box-shadow: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 4px 20px -4px hsl(240 3.8% 45% / 0.1);
   }
 
   .no-scrollbar {
@@ -232,5 +248,18 @@
 
   .animate-pulse-slow {
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
   }
 }
